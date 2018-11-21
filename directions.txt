@@ -1,0 +1,18 @@
+1- Remove the subtotals
+2- The common columns in all fiscal years: 
+	office
+	quarter
+	category
+	date
+	start date
+	end date
+	purpose
+	amount
+	year
+	transcode
+	recordID
+   Keep these columns and remove the others
+3- Remove 2009 from the data
+4- Remove 2018 from the data
+5- Clean the PAYEE column which includes some unnecessary characters
+ 
