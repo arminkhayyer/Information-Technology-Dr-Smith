@@ -15,4 +15,6 @@
 3- Remove 2009 from the data
 4- Remove 2018 from the data
 5- Clean the PAYEE column which includes some unnecessary characters
+6- The Negative values should stay as it is. Cheking the real PDF files released by the House, I found that there are some negative
+	values in the files so we should consider them as the returning values.
  
