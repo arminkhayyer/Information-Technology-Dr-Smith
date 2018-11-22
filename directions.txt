@@ -17,4 +17,7 @@
 5- Clean the PAYEE column which includes some unnecessary characters
 6- The Negative values should stay as it is. Cheking the real PDF files released by the House, I found that there are some negative
 	values in the files so we should consider them as the returning values.
+7-After data cleaning step(our first step in analyzing the data), we should answer some interesting question about the data.
+	Some ideas can be seen in this website: https://web.archive.org/web/20150321015057/https://www.opencongress.org/wiki/House_Statement_of_Disbursements_and_Senate_Statement_of_Receipts_and_Expenditures#Possible_Types_of_Disbursement_Stories
+	on the other hand after having the data cleaned we can discuss about the information that we are goıng to reveal using the data.
  
