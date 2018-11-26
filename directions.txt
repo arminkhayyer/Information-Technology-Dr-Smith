@@ -20,4 +20,5 @@
 7-After data cleaning step(our first step in analyzing the data), we should answer some interesting question about the data.
 	Some ideas can be seen in this website: https://web.archive.org/web/20150321015057/https://www.opencongress.org/wiki/House_Statement_of_Disbursements_and_Senate_Statement_of_Receipts_and_Expenditures#Possible_Types_of_Disbursement_Stories
 	on the other hand after having the data cleaned we can discuss about the information that we are goıng to reveal using the data.
- 
+ 8 - regression model, coverage, season, year, office
+ 9 - apis, creating realtional database mysql, query for each bioguide id, visualization
