@@ -5,5 +5,5 @@ congress = Congress(api_key)
 
 # get member by bioguide ID
 pelosi = congress.members.get('P000197')
-print(pelosi['twitter_account'])
+print(pelosi)
 'NancyPelosi'
