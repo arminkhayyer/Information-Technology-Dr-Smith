@@ -5,6 +5,7 @@ path =r'C:\Users\oguzt\Documents\GitHub\Information-Technology-Dr-Smith\to be do
 allFiles = glob.glob(path + "/*.csv")
 list = [pd.read_csv(file,index_col = None, header = 0) for file in allFiles] 
 df = pd.concat(list, axis = 0, ignore_index = True)
+df.dropna(subset=['PAYEE'], inplace=True)
 #####################################################################
 def convert_to_float(row):
     string = str(row["AMOUNT"]).replace(",", "")
@@ -13,8 +14,6 @@ def convert_to_float(row):
 def split_strings(row):
     string = row["PAYEE"].rsplit( "  ", maxsplit=3)
     return string[-1]
-#df.dropna()
-#f.dropna(subset=['PAYEE'], inplace=True)
 #####################################################################
 def split_strings2(row):
     string2 = row["OFFICE"]
@@ -49,3 +48,5 @@ df["YEAR"] = df.apply(lambda row: year_finder(row), axis= 1)
 df["OFFICE"] = df.apply(lambda row: split_strings2(row), axis=1)
 df.to_csv('ALLDATA.csv')
 #####################################################################
+df.head()
+df.tail(20)
