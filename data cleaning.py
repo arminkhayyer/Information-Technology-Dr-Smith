@@ -58,13 +58,17 @@ df = df.loc[df["START DATE"] != '   ']
 df['START DATE'].replace('', np.nan, inplace=True)
 df.dropna(subset=['START DATE'], inplace=True)
 df["START DATE"] = pd.to_datetime(df["START DATE"])
+print("startdate done")
 df = df.loc[df["END DATE"] != '   ']
 df['END DATE'].replace('', np.nan, inplace=True)
 df.dropna(subset=['END DATE'], inplace=True)
 df["END DATE"] = pd.to_datetime(df["END DATE"])
+print("end date done")
 df["AMOUNT"] = df.apply(lambda row: convert_to_float(row), axis =1)
+print("amount done")
 df["PAYEE"] = df.apply(lambda row: split_strings(row), axis= 1)
 df["YEAR"] = df.apply(lambda row: year_finder(row), axis= 1)
+print("Year done")
 df["OFFICE"] = df.apply(lambda row: split_strings2(row), axis=1)
 
 
@@ -72,5 +76,5 @@ csv_directory= "../cleaned-data.csv"
 mehdi_csv_direcotry ='ALLDATA.csv'
 df.to_csv(csv_directory)
 #####################################################################
-df.head()
-df.tail(20)
+print(df.head())
+
