@@ -22,3 +22,4 @@
 	on the other hand after having the data cleaned we can discuss about the information that we are goıng to reveal using the data.
  8 - regression model, coverage, season, year, office
  9 - apis, creating realtional database mysql, query for each bioguide id, visualization
+10- doing query for sql (all the bio IDs that we have) and show some pi charts for their party, gender, and state
