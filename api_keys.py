@@ -8,6 +8,9 @@ import time
 api_key = 'Z7cnuQ3cufA08VfbWOoqURVpeSUuyT8QQazVwAGY'
 congress = Congress(api_key)
 
+print(congress.members.get("R000575"))
+
+'''
 df = pd.read_csv("../cleaned-data.csv")
 bio_guides_ID= df["BIOGUIDE_ID"].unique()[1:]
 
@@ -42,4 +45,4 @@ newdf = pd.DataFrame.from_dict(legislators)
 newdf = newdf[[ "first_name",	"middle_name",	"last_name","in_office", "gender"	,"member_id",	"govtrack_id"]]
 
 
-newdf.to_csv("../newdf.csv")
+newdf.to_csv("../newdf.csv")'''

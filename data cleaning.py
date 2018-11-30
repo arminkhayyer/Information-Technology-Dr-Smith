@@ -10,7 +10,7 @@ path = "../house-office-expenditures-with-readme"
 #path =r'C:\Users\oguzt\Documents\GitHub\Information-Technology-Dr-Smith\to be done'
 allFiles = glob.glob(path + "/*.csv")
 
-list = [pd.read_csv(file,index_col = None, header = 0) for file in allFiles] 
+list = [pd.read_csv(file,index_col = None, header = 0, encoding= 'unicode_escape') for file in allFiles]
 df = pd.concat(list, axis = 0, ignore_index = True)
 df.dropna(subset=["PAYEE", "PURPOSE"],inplace=True)
 
