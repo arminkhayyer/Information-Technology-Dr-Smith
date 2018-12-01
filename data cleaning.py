@@ -52,6 +52,12 @@ def split_strings2(row):
 def year_finder(row):
     string = row.QUARTER[0:4]
     return (string)
+
+def kir_finder(row):
+    string = row.CATEGORY
+    if string == "RENT  COMMUNICATION  UTILITIES" or string == "RENT COMMUNICATION UTILITIES":
+        string = "RENT, COMMUNICATION, UTILITIES"
+    return(string)
 #####################################################################
 #df = list[31]
 df = df.loc[df["START DATE"] != '   ']
@@ -70,7 +76,9 @@ df["PAYEE"] = df.apply(lambda row: split_strings(row), axis= 1)
 df["YEAR"] = df.apply(lambda row: year_finder(row), axis= 1)
 print("Year done")
 df["OFFICE"] = df.apply(lambda row: split_strings2(row), axis=1)
-
+df["CATEGORY"] = df.apply(lambda row: kir_finder(row), axis=1)
+df["coverage_period"] = df["END DATE"] - df["START DATE"]
+df["coverage_period"] = df["coverage_period"].dt.days
 
 csv_directory= "../cleaned-data.csv"
 mehdi_csv_direcotry ='ALLDATA.csv'
